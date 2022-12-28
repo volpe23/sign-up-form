@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    --primary: #fcf8f0;
+    --text-primary: #444444;
+    --title-text: #636363;
+    background-color: #fcf8f0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.photo {
+    background-image: url(./david-pisnoy-46juD4zY1XA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 30vw;
+}
+
+.content {
+    
+    width: 70vw;
+    height: 100%;
+}
