@@ -17,6 +17,8 @@ h2 {
 }
 .container {
     display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
     height: 100vh;
     width: 100vw;
 }
@@ -38,19 +40,13 @@ h2 {
     background-color: #00000038;
     display: flex;
     justify-content: center;
-    padding: 20px 0;
+    flex-wrap: wrap;
+    padding: 20px 20px;
     gap:30px;
 }
-.logo > img {
-    width: 100px;
-    background: none;
-    color: #32cd32;
-    /* filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%); */
-}
+
 svg {
-    /* width: 100px; */
     background: none;
-    /* fill: linear-gradient(to right, rgb(250, 112, 154), rgb(254, 225, 64)); */
 }
 .logo-text {
     display: flex;
@@ -70,15 +66,19 @@ svg {
     background-color: #fcf8f0;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: flex-start;
     width: 60vw;
+    min-width: 330px;
     height: 100%;
 }
 
 .content > * > * {
     width: 100%;
     padding: 0 4rem;
+}
+.hero {
+    min-height: 150px;
 }
 .inputs {
     display: flex;
@@ -90,9 +90,6 @@ svg {
     box-shadow: 0px 6px 14px 1px #e4dede;
     border-radius: 2px;
 }
-.input-div {
-    width: 100%;
-}
 
 form {
     width: 100%;
@@ -103,9 +100,11 @@ form {
 }
 
 .input-div {
+    width: 100%;
     display: flex;
-    /* justify-content: space-between; */
-    gap: 6rem;
+    align-items: flex-end;
+    min-width: 330px;
+    gap: 4rem;
 }
 .input-div > div {
     display: flex;
@@ -120,27 +119,29 @@ input {
     height: 1.8rem;
     width: 100%;
     min-width: 150px;
+    max-width: 350px;
     padding: 0 10px;
+    margin-right: 10px;
     transition: box-shadow 0.2s ease-in-out;
     /* transition: border-color 0.2s ease-in-out; */
 }
 input:focus {
     /* appearance: none; */
     outline: none;
-    border: 1px solid rgb(248, 209, 209);
+    border: 1px solid rgb(247, 197, 197);
     box-shadow: 0px 2px 5px 1px #eacfcf9c;
     /* border-color: red; */
 }
-input:invalid {
-    border: 1px solid rgb(255, 0, 0);
+input:hover {
+    border: 1px solid rgb(248, 184, 184);
 }
 input:valid {
     border: 1px solid #70d470a9;
 }
 input::placeholder {
     opacity: .7;
-
 }
+
 label {
     font-size: 1.2rem;
 }
@@ -159,11 +160,17 @@ button {
     font-weight: 700;
     color: var(--primary);
     font-size: 1rem;
-    transition: transform 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in;
+    transition: scale 0.2s ease-in-out, background-color 0.1s ease-in-out;
+    /* transition: background-color 0.2s ease-in; */
 }
 button:hover {
-    transform: scale(1.1);
+    scale: 1.1;
     border: 1px solid rgba(28, 192, 28, 0.671);
     background-color: #32cd32;
+}
+a {
+    transition: font-weight 0.2s ease-in-out;
+}
+a:hover {
+    font-weight: 700;
 }
