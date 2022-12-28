@@ -15,9 +15,9 @@
                     <!-- <img src="brush.svg"> -->
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid " class="svg" >
                         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:rgb(10, 37, 70);stop-opacity:0.75" />
-                            <stop offset="50%" style="stop-color:rgb(49, 63, 66);stop-opacity:0.75" />
-                            <stop offset="100%" style="stop-color:rgb(8, 52, 105);stop-opacity:0.75" />
+                            <stop offset="0%" style="stop-color:rgb(14, 33, 56);stop-opacity:0.85" />
+                            <stop offset="50%" style="stop-color:rgb(49, 63, 66);stop-opacity:0.85" />
+                            <stop offset="100%" style="stop-color:rgb(8, 52, 105);stop-opacity:0.85" />
                           </linearGradient>
                         <g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="url(#gradient)" stroke="none">
                             
@@ -42,7 +42,7 @@
                         126 239 324 40 102 79 164 141 219 61 55 128 88 188 93 76 8 128 -22 255 -147
                         62 -60 117 -110 122 -110 15 0 184 174 184 189 0 14 -1012 1031 -1026 1031 -5
                         0 -51 -43 -103 -95z"></path>
-                        <path class="node" fill="#ffffffa0" id="node4" d="M2700 1588 c-12 -40 -28 -89 -35 -108 -7 -19 -24 -66 -39 -105 -14
+                        <path class="node" fill="#ffffffaf" id="node4" d="M2700 1588 c-12 -40 -28 -89 -35 -108 -7 -19 -24 -66 -39 -105 -14
                         -38 -50 -133 -80 -210 -31 -77 -60 -164 -67 -193 -30 -140 35 -262 162 -307
                         59 -21 110 -19 171 9 95 43 148 121 151 222 1 47 -7 70 -75 206 -87 176 -133
                         311 -143 418 -12 125 -12 131 -17 136 -3 2 -15 -28 -28 -68z"></path>
@@ -66,32 +66,34 @@
                         <div class="input-div">
                             <div class="name-div">
                                 <label for="#name">First name</label>
-                                <input type="text" id="name" minlength="2" maxlength="30" required>
+                                <input type="text" id="name" minlength="2" maxlength="30" placeholder="Jon" required>
                             </div>
                         <div class="lastname-div">
                             <label for="">Last name</label>
-                            <input type="text" minlength="2" maxlength="30" required>
+                            <input type="text" minlength="2" maxlength="30" placeholder="Doe" required>
                         </div>
                         </div>
                         <div class="input-div">
                             <div class="email-div">
                                 <label for="#email">Email</label>
-                                <input type="text" id="email">
+                                <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required title="Please enter a valid email address">                          
                             </div>
                             <div class="phonenum-dv">
                                 <label for="#phoneNumber">Phone number</label>
-                                <input type="text" id="phoneNumber">
+                                <input type="text" id="phoneNumber" minlength="4" maxlength="16">
                             </div>
                         </div>
                         <div class="input-div">
                             <div class="password-div">
-                                <label for="">Password</label>
-                                <input type="password">
+                                <label for="#password">Password</label>
+                                <input type="password" id="password" minlength="8" maxlength="20"  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                                 title="Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number" required>
                             </div>
                         
                             <div class="conf-password">
-                                <label for="#password">Confirm password</label>
-                                <input type="password" id="password">
+                                <label for="#conf-password">Confirm password</label>
+                                <input type="password" id="conf-password" minlength="8" maxlength="20" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                title="Your password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number" required>
                             </div>
                         </div>
                     </div>
